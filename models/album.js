@@ -7,6 +7,6 @@ const albumSchema = mongoose.Schema({
   genres: [{type: String}],
   albumCoverUrl: String,
   tracks: [{type: String}],
-  availibleTracks: String
+  availibleTracks: [{type: String}]
 });
 module.exports = mongoose.model('Album', albumSchema);
