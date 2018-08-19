@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html ng-app="SinatraFans" lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>WDI Project 3</title>
+    <title>WDI Project 3 - Sinatra-Fans</title>
   </head>
-  <body>
-    <h1>Hello World!</h1>
+  <body class="container" ng-controller='MainCtrl'>
+    <nav class="navbar">
+      <a ui-sref-active= "is-active" ui-sref="home" class="navbar-item">Home</a>
+      <a ui-sref-active= "is-active" ui-sref="about" class="navbar-item">About</a>
+      <a ui-sref-active= "is-active" ui-sref="albumsIndex" class="navbar-item">Sinatra's Albums</a>
+      <a ui-sref-active= "is-active" ui-sref="tracksIndex" class="navbar-item">Sinatra's Songs</a>
+      <!-- <a ui-sref-active= "is-active" ui-sref="login" class="navbar-item" ng-if='!isAuthenticated()'>Log in</a> -->
+      <!-- <a ui-sref-active= "is-active" ui-sref="register" class="navbar-item" ng-if='!isAuthenticated()'>Sign up!</a> -->
+      <!-- <a ui-sref-active= "is-active" ng-click="logout()" class="navbar-item" ng-if='isAuthenticated()'>Log out</a> -->
+    </nav>
+    <div ui-view></div>
   </body>
 </html>
