@@ -12,14 +12,14 @@ function Router($stateProvider, $urlRouterProvider){
       templateUrl: './views/home.html',
       url: '/'
     })
-    .state('whiskeysIndex', {
+    .state('albumsIndex', {
       templateUrl: './views/albums/index.html',
       url: '/albums', //optional
       controller: 'AlbumsIndexCtrl' //optional
     })
     .state('tracksIndex', {
       templateUrl: './views/tracks/index.html',
-      url: '/albums', //optional
+      url: '/tracks', //optional
       controller: 'TracksIndexCtrl' //optional
     });
 

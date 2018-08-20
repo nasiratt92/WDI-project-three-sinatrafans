@@ -15,9 +15,9 @@ import Router from './config/routes';
 import MainCtrl from './controllers/main';
 import AlbumsIndexCtrl from './controllers/albums/index';
 import TracksIndexCtrl from './controllers/tracks/index';
-// import AlbumsNewCtrl from './controllers/whiskeys/new';
-// import AlbumsShowCtrl from './controllers/whiskeys/show';
-// import AlbumsEditCtrl from './controllers/whiskeys/edit';
+// import AlbumsNewCtrl from './controllers/albums/new';
+// import AlbumsShowCtrl from './controllers/albums/show';
+// import AlbumsEditCtrl from './controllers/albums/edit';
 // import AuthLoginCtrl from './controllers/auth/login';
 // import AuthRegisterCtrl from './controllers/auth/register';
 

@@ -1,1 +1,31 @@
-<h1> class="title is-2">Browse our collection of {{ tracks.length }} Albums</h1>
+<h1 class="title is-2">Browse our collection of {{ tracks.length }} Tracks</h1>
+
+<h2 class="subtitle is-2">For your delight</h2>
+
+<div class="container columns is-multiline">
+
+  <div class="column is-half box has-text-centered" ng-repeat="track in tracks">
+    <a ui-sref="tracksShow({ id: track._id })">
+    <h2 class="title is-3">{{ track.name }}</h2>
+    <div class="columns">
+      <div class="column">
+        <img style="max-height: 300px,  " ng-src="{{ track.trackCoverUrl }}" alt="{{ track.a }}">
+      </div>
+    </div>
+</a>
+  </div>
+  <div class="column is-half box has-text-centered" >
+    <div class="columns">
+
+      <div class="column">
+
+        <div class="column">
+          <img style="max-height: 300px" src="https://image.flaticon.com/icons/svg/45/45637.svg" alt="add track Icon">
+        </div>
+      </div>
+      <div class="column">
+        <a class="button is-info" ui-sref="tracksNew">Add +</a>
+      </div>
+    </div>
+  </div>
+</div>
