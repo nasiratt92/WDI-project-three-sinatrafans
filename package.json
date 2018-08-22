@@ -12,6 +12,7 @@
     "test": "nyc mocha test/**/*_spec.js --require test/spec_helper --recursive --exit"
   },
   "dependencies": {
+    "@uirouter/angular": "ui-router/angular",
     "@uirouter/angularjs": "^1.0.16",
     "angular": "^1.7.3",
     "bcrypt": "^3.0.0",

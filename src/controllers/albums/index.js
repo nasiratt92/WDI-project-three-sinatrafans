@@ -1,11 +1,11 @@
-function ConcertsIndexCtrl($scope, $http){
+function AlbumsIndexCtrl($scope, $http){
   $http({
     method: 'GET',
-    url: 'api/concerts'
+    url: 'api/albums'
   })
     .then(res =>{
-      $scope.concerts = res.data;
+      $scope.albums = res.data;
     });
 
 }
-export default ConcertsIndexCtrl;
+export default AlbumsIndexCtrl;
