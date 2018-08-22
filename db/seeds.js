@@ -14,12 +14,13 @@ User.collection.drop();
 const userData = [{
   userName: 'alpha',
   email: 'a@a.com',
-  password: 'pass'
-
+  password: 'pass',
+  passwordConfirmation: 'pass'
 },{
   userName: 'beta',
   email: 'b@b.com',
-  password: 'pass'
+  password: 'pass',
+  passwordConfirmation: 'pass'
 }
 ];
 const albumData = [{
