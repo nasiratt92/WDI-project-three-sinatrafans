@@ -21,6 +21,11 @@ function Router($stateProvider, $urlRouterProvider){
       templateUrl: './views/tracks/index.html',
       url: '/tracks', //optional
       controller: 'TracksIndexCtrl' //optional
+    })
+    .state('concertsIndex', {
+      templateUrl: './views/concerts/index.html',
+      url: '/concerts', //optional
+      controller: 'ConcertsIndexCtrl' //optional
     });
 
 
