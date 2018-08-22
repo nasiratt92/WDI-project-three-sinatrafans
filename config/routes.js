@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const secureRoute = require('../lib/secureRoute');
 const albumController = require('../controllers/albumController');
 const trackController = require('../controllers/trackController');
 const authController = require('../controllers/authController');
@@ -11,7 +12,7 @@ router.route('/albums')
 router.route('/albums/:id')
   .get(albumController.show)
   .put(albumController.update)
-  .delete(albumController.delete);
+  .delete(secureRoute, albumController.delete);
 
 router.route('/tracks')
   .get(trackController.index)
