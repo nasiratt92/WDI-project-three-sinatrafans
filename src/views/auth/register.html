@@ -1,0 +1,21 @@
+<p>Welcome Music Lover. (Already got an account <a ui-sref="login">Sign up!</a>)</p>
+<form ng-submit="register()" name="form" novalidate>
+
+  <div class="field">
+    <label class="label" for="userName">User name</label>
+    <input ng-model="user.userName" class='input' type="text" name="userName" >
+  </div>
+  <div class="field">
+    <label class="label" for="email">Email</label>
+    <input ng-model="user.email" class='input' type="email" name="email" >
+  </div>
+  <div class="field">
+    <label class="label" for="password">Password</label>
+    <input ng-model="user.password" class='input' type="password" name="password" >
+  </div>
+  <div class="field">
+    <label class="label" for="passwordConfirmation">Confirm your Password</label>
+    <input ng-model="user.passwordConfirmation" class='input' type="password" name="passwordConfirmation" >
+  </div>
+<button class="button is-info">Sign up</button>
+</form>

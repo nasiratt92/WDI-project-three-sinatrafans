@@ -1,0 +1,34 @@
+
+    <!-- Track NEW -->
+    <section>
+      <form class="column is-5"ng-submit="createTrack()">
+        <!-- name -->
+        <div class="field">
+          <label for="name">name</label>
+          <input ng-model="track.name" class="input" type="text" name="name" placeholder="e.g. Let it snow">
+
+        </div>
+        <!-- artist -->
+        <div class="field">
+          <label for="artist">Artist</label>
+          <input ng-model="track.artist" class="input" type="text" name="artist" placeholder="e.g. 2103">
+
+        </div>
+
+          <!-- soundcloudId -->
+          <div class="field">
+            <label for="soundcloudId">Souncloud ID number:</label>
+            <input ng-model="track.soundcloudId" class="input" type="text" name="soundcloudId" placeholder="1183982">
+
+          </div>
+          <!-- album -->
+          <div class="field">
+            <label for="album">Album</label>
+            <input ng-model="track.album" class="input" type="text" name="album" placeholder="Boslo">
+
+          </div>
+        </div>
+        <button class="button" title="Do it">Add</button>
+      </form>
+
+    </section>

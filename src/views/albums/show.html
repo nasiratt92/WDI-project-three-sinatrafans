@@ -1,0 +1,21 @@
+<h1 class="title">{{ album.name }}</h1>
+<div class="container">
+  <img src="{{ album.albumCoverUrl}}" alt="{{ album.name }}">
+  <hr>
+
+  <p>This album was realeased in the year {{ album.releaseYear }} </p>
+  <p>Number of Tracks: {{ album.numberofTracks }} </p>
+  <p>Genres {{ album.genres }} </p>
+  <p>Tracks: {{ album.tracks }} </p>
+  <p>availible to listen : </p>
+<hr>
+<div class="level">
+<div class="level-left">
+<a class="button is-info" ui-sref="AlbumsEdit({ id: album._id})">Edit</a>
+  </div>
+<div class="level-right">
+<button class="button is-danger" ng-click="deleteAlbum()">delete</button>
+  </div>
+
+</div>
+</div>
