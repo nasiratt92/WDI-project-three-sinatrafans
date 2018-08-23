@@ -9,6 +9,7 @@ function albumsIndex(req, res) {
     .catch(() => res.status(500).json({ message: 'Something went wrong'}));
 }
 function albumCreate(req,res) {
+  req.body.tracks = req.body.tracks.split('|');
   Album
     .create(req.body)
     .then(album => res.status(201).json(album))
