@@ -7,13 +7,15 @@
   <div class="column is-half box has-text-centered" ng-repeat="track in tracks">
     <a ui-sref="tracksShow({ id: track._id })">
     <h2 class="title is-3">{{ track.name }}</h2>
-    <div class="columns">
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{track.soundcloudId}}&amp;color=0066cc"></iframe>
+ <div class="columns">
       <div class="column">
         <img style="max-height: 300px,  " ng-src="{{ track.trackCoverUrl }}" alt="{{ track.a }}">
       </div>
     </div>
 </a>
-  </div>
+
+</div>
   <div class="column is-half box has-text-centered" >
     <div class="columns">
 

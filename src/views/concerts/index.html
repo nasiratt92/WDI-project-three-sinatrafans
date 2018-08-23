@@ -7,7 +7,8 @@
     <div class="columns">
       <div class="column">
         <img style="max-height: 300px" ng-src="{{ concert.images[0].url }}" alt="{{ concert.name }}">
-        <h2 class="title is-3">{{ concert._embedded.venues[0].name }}, {{concert._embedded.venues[0].city.name }} -  directions ⚫️ </h2>
+        <h2 class="title is-3">{{ concert._embedded.venues[0].name }}, {{concert._embedded.venues[0].city.name }}, {{ concert._embedded.venues[0].country.countryCode}}</h2>
+        <h3 class="title is-4">Get directions</h3>
       </div>
     </div>
 </a>
