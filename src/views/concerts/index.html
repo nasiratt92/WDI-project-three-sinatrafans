@@ -1,14 +1,20 @@
-<h1>Here is the list of tribute concerts </h1>
+<h1 class="title is-2">Here is the list of {{ concerts.length }} tribute concerts</h1>
+<div class="column is-full box has-text-left">
+
+  <p>Type in date, venue or city to shortlist:</p>
+  <p ><input type="text" ng-model="test"></p>
+</div>
+
 
 <div class="container columns is-multiline" ng-init="getConcerts()">
-
-  <div class="column is-half box has-text-centered" ng-repeat="concert in concerts">
-    <h2 class="title is-3">{{ concert.name }} -{{ concert.dates.start.localDate }} </h2>
+  <div class="column is-half box has-text-centered" ng-repeat="concert in concerts | filter:test">
+    <h2 class="title is-3">{{ concert.name }}</h2>
     <div class="columns">
       <div class="column">
         <img style="max-height: 300px" ng-src="{{ concert.images[0].url }}" alt="{{ concert.name }}">
+
         <h2 class="title is-3">{{ concert._embedded.venues[0].name }}, {{concert._embedded.venues[0].city.name }}, {{ concert._embedded.venues[0].country.countryCode}}</h2>
-        <h3 class="title is-4">Get directions</h3>
+        <h3 class="title is-5"> {{ concert.dates.start.localDate }} - {{ concert.dates.start.localTime }} </h3>
       </div>
     </div>
 </a>

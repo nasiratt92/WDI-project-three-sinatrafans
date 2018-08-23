@@ -54,12 +54,13 @@ const trackData = [{
   name: 'Come Fly With Me',
   artist: 'Frank Sinatra',
   soundcloudId: 259109100,
-  soundcloudEmbedUrl: 'https://soundcloud.com/frank-sinatra/come-fly-with-me-1'
+  soundcloudEmbedUrl: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/259153771&color=%233a4f60&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
+
 },{
-  name: 'Ain/t That A Kick In The Head',
+  name: 'Ain\'t That A Kick In The Head',
   artist: 'KevinFitzsimmons',
   soundcloudId: 105889556,
-  soundcloudEmbedUrl: 'https://soundcloud.com/deanmartintribute/dean-martin-tribute-aint-that'
+  soundcloudEmbedUrl: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/105889556&color=%233a4f60&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
 }];
 
 User

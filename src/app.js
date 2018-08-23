@@ -9,6 +9,7 @@ import 'bulma';
 import Router from './config/routes';
 
 //custom directives
+import ngSoundcloud from './directives/ngSoundcloud';
 // import Map from './directives/map';
 
 //controllers
@@ -28,6 +29,7 @@ angular.module('SinatraFans', [
 
 // [] = would mean no dependencies
   // .directive('ngMap', Map)
+  .directive('ngSoundcloud', ngSoundcloud)
   .controller('MainCtrl',MainCtrl )
   .controller('AlbumsIndexCtrl',AlbumsIndexCtrl )
   .controller('TracksIndexCtrl',TracksIndexCtrl )
