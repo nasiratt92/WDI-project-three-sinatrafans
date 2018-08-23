@@ -1,0 +1,35 @@
+
+    <!-- Track NEW -->
+    <section>
+      <form class="column is-5"ng-submit="createAlbum()">
+        <!-- name -->
+        <div class="field">
+          <label for="name">name</label>
+          <input ng-model="album.name" class="input" type="text" name="name" placeholder="e.g. Let it snow">
+
+        </div>
+        <!-- releaseYear -->
+        <div class="field">
+          <label for="releaseYear">Release Year:</label>
+          <input ng-model="album.releaseYear" class="input" type="text" name="releaseYear" placeholder="e.g. 2103">
+
+        </div>
+
+          <!-- numberofTracks -->
+          <div class="field">
+            <label for="numberofTracks">Number of tracks on album:</label>
+            <input ng-model="album.numberofTracks" class="input" type="text" name="numberofTracks" placeholder="11">
+
+          </div>
+          <!-- albumCoverUrl -->
+          <div class="field">
+            <label for="albumCoverUrl">Album cover URL:</label>
+            <input ng-model="album.albumCoverUrl" class="input" type="text" name="albumCoverUrl" placeholder="web link to cove imae">
+
+          </div>
+
+        </div>
+        <button class="button" title="Do it">Add</button>
+      </form>
+
+    </section>
