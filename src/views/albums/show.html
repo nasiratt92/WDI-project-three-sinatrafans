@@ -7,7 +7,16 @@
   <p>Number of Tracks: {{ album.numberofTracks }} </p>
   <p>Genres {{ album.genres }} </p>
   <p>Tracks: {{ album.tracks }} </p>
-  <p>availible to listen : </p>
+  <p>available to listen : </p>
+  <div ng-repeat="track in tracksAvailable">
+    <p>{{ track.name }}</p>
+    <p>{{ track.artist }}</p>
+    <a ui-sref="tracksIndex">See all the tracks</a>
+  </div>
+<hr>
+<div class="level">
+  <a class="button is-warning" ui-sref="tracksNew({ albumId: album._id })">Add track</a>
+</div>
 <hr>
 <div class="level">
 <div class="level-left">

@@ -39,10 +39,16 @@ function trackDelete(req, res) {
     .catch(() => res.status(500).json({ message: 'Something went wrong'}));
 }
 
+function findByAlbum(req, res) {
+  Track.find({ album: req.params.id })
+    .then(tracks => res.json(tracks));
+}
+
 module.exports = {
   index: tracksIndex,
   create: trackCreate,
   show: trackShow,
   update: trackUpdate,
-  delete: trackDelete
+  delete: trackDelete,
+  findByAlbum: findByAlbum
 };

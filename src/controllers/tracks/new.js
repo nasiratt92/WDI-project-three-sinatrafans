@@ -1,4 +1,7 @@
 function TracksNewCtrl($scope, $http, $state) {
+  $scope.track = {
+    album: $state.params.albumId
+  };
   $scope.createTrack = function(){
     console.log('creating a new one', $scope.track);
     $http({

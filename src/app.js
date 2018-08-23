@@ -19,10 +19,10 @@ import TracksIndexCtrl from './controllers/tracks/index';
 import ConcertsIndexCtrl from './controllers/concerts/index';
 import TracksNewCtrl from './controllers/tracks/new';
 // import AlbumsNewCtrl from './controllers/albums/new';
-// import AlbumsShowCtrl from './controllers/albums/show';
+import AlbumsShowCtrl from './controllers/albums/show';
 // import AlbumsEditCtrl from './controllers/albums/edit';
-// import AuthLoginCtrl from './controllers/auth/login';
-// import AuthRegisterCtrl from './controllers/auth/register';
+import AuthLoginCtrl from './controllers/auth/login';
+import AuthRegisterCtrl from './controllers/auth/register';
 
 angular.module('SinatraFans', [
   'ui.router', 'satellizer', 'ngMessages'
@@ -37,10 +37,10 @@ angular.module('SinatraFans', [
   .controller('ConcertsIndexCtrl',ConcertsIndexCtrl )
   .controller('TracksNewCtrl',TracksNewCtrl )
   // .controller('AlbumsNewCtrl',AlbumsNewCtrl )
-  // .controller('AlbumsShowCtrl',AlbumsShowCtrl )
+  .controller('AlbumsShowCtrl',AlbumsShowCtrl )
   // .controller('AlbumsEditCtrl',AlbumsEditCtrl )
-  // .controller('AuthLoginCtrl',AuthLoginCtrl )//ahead
-  // .controller('AuthRegisterCtrl',AuthRegisterCtrl )//ahead
+  .controller('AuthLoginCtrl',AuthLoginCtrl )//ahead
+  .controller('AuthRegisterCtrl',AuthRegisterCtrl )//ahead
 
   .config(Router)
   .config(function($authProvider) {

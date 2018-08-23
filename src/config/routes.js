@@ -32,13 +32,18 @@ function Router($stateProvider, $urlRouterProvider){
     })
     .state('albumsNew', {
       templateUrl: './views/albums/new.html',
-      url: '/albums/new', //optional - id is parameter of state
+      url: '/albums/new',
       controller: 'AlbumsNewCtrl' //optional
     })
     .state('albumsEdit', {
       templateUrl: './views/albums/edit.html',
       url: '/albums/:id/edit', //optional - id is parameter of state
       controller: 'AlbumsEditCtrl' //optional
+    })
+    .state('albumsShow', {
+      templateUrl: './views/albums/show.html',
+      url: '/albums/:id',
+      controller: 'AlbumsShowCtrl' //optional
     })
     .state('login', {
       templateUrl: './views/auth/login.html',
@@ -57,7 +62,7 @@ function Router($stateProvider, $urlRouterProvider){
     })
     .state('tracksNew', {
       templateUrl: './views/tracks/new.html',
-      url: '/tracks/new', //optional
+      url: '/albums/:albumId/tracks/new', //optional
       controller: 'TracksNewCtrl' //optional
     })
     .state('concertsIndex', {

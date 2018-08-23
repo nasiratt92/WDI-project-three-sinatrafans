@@ -14,6 +14,9 @@ router.route('/albums/:id')
   .put(albumController.update)
   .delete(secureRoute, albumController.delete);
 
+router.route('/albums/:id/tracks')
+  .get(trackController.findByAlbum);
+
 router.route('/tracks')
   .get(trackController.index)
   .post(trackController.create);
