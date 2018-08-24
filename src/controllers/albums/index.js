@@ -6,14 +6,14 @@ function AlbumsIndexCtrl($scope, $http){
     .then(res =>{
       $scope.albums = res.data;
     });
-  
+
   $http({
     method: 'GET',
-    url: 'https://itunes.apple.com/lookup?id=171366&entity=album'
+    url: '/api/itunes'
   })
     .then(res => {
-      console.log('Result of iTunes search was', res);
-      $scope.results = res.data.results;
+      // We only want 'collections' (i.e. albums), not artists or anything else
+      $scope.itunes = res.data.filter(listItem => listItem.wrapperType === 'collection');
     });
 
 }

@@ -1,19 +1,11 @@
-<h1 class="title is-2">Browse our collection of {{ albums.length }} Albums</h1>
-<h2 class="subtitle is-2">For your delight</h2>
-
+<br>
+<h1 class="title is-2"> Fan Albums</h1>
+<br
+<h5 class="subtitle is-5">Browse our collection fan albums which member-fans have created to celebrate the music legend </h5>
+<hr>
 <div class="container columns is-multiline">
 
-
-  <div class="column is-half box has-text-centered" ng-repeat="x in results">
-      <h2 class="title is-3">{{ x.collectionName }}</h2>
-      <div class="columns">
-        <div class="column">
-          <img style="max-height: 300px" ng-src="{{ x.artworkUrl100 }}" alt="{{ x.collectionName }}">
-        </div>
-      </div>
-  </div>
-
-  <div class="column is-half box has-text-centered" ng-repeat="album in albums">
+  <div class="column is-half has-text-centered" ng-repeat="album in albums">
     <a ui-sref="albumsShow({ id: album._id })">
       <h2 class="title is-3">{{ album.name }}</h2>
       <div class="columns">
@@ -23,7 +15,7 @@
       </div>
     </a>
   </div>
-  <div class="column is-half box has-text-centered" >
+  <div class="column is-half has-text-centered" >
     <div class="columns">
 
       <div class="column">
@@ -35,6 +27,23 @@
         <a class="button is-info" ui-sref="albumsNew">Add +</a>
       </div>
     </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<hr>
+<div class="container">
+  <h2 class="subtitle is-2">Other Album titles which you may also remember</h2>
+  <h5 class="subtitle is-5">source: Itunes</h5>
+  <div class="columns is-multiline">
+    <div class="column is-half has-text-centered" ng-repeat="album in itunes">
+      <h2 class="title is-3">{{ album.collectionName }}</h2>
+      <div class="columns">
+        <div class="column is-quarter">
+          <img style="max-height: 300px" ng-src="{{ album.artworkUrl100 }}" alt="{{ album.collectionName }}">
+        </div>
+      </div>
     </div>
   </div>
 </div>

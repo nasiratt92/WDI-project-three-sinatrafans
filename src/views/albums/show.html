@@ -5,7 +5,9 @@
 
   <p>This album was realeased in the year {{ album.releaseYear }} </p>
   <p>Number of Tracks: {{ album.numberofTracks }} </p>
-  <p>Genres {{ album.genres }} </p>
+  <p >Genres: <span ng-repeat='genre in album.track.genres' class="tag">
+   {{ album.genres }}
+  </span></p>
   <p>Tracks: {{ album.tracks }} </p>
   <p>available to listen : </p>
   <div ng-repeat="track in tracksAvailable">
@@ -13,18 +15,20 @@
     <p>{{ track.artist }}</p>
     <a ui-sref="tracksIndex">See all the tracks</a>
   </div>
+</div>
 <hr>
+<div class="buttons">
+
 <div class="level">
   <a class="button is-warning" ui-sref="tracksNew({ albumId: album._id })">Add track</a>
-</div>
-<hr>
-<div class="level">
-<div class="level-left">
+
+
+<!-- <div class="level-left">
 <a class="button is-info" ui-sref="AlbumsEdit({ id: album._id})">Edit</a>
-  </div>
-<div class="level-right">
-<button class="button is-danger" ng-click="deleteAlbum()">delete</button>
+  </div> -->
+
+<button class="button is-danger" ng-click="deleteAlbum()">delete whole album</button>
   </div>
 
-</div>
+
 </div>

@@ -5,6 +5,7 @@ const albumController = require('../controllers/albumController');
 const trackController = require('../controllers/trackController');
 const authController = require('../controllers/authController');
 const concertController = require('../controllers/concertController');
+const iTunesController = require('../controllers/iTunesController');
 
 router.route('/albums')
   .get(albumController.index)
@@ -30,6 +31,9 @@ router.route('/register')
 
 router.route('/login')
   .post(authController.login);
+
+router.route('/itunes')
+  .get(iTunesController.listAlbums);
 
 router.route('/concerts')
   .get(concertController.list);
