@@ -7,6 +7,9 @@ function TracksIndexCtrl($scope, $http){
       $scope.tracks = res.data;
       console.log('$scope.tracks', $scope.tracks);
     });
-    
+//create a sort  func
+
+
+
 }
 export default TracksIndexCtrl;
