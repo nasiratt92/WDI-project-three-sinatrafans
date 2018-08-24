@@ -2,9 +2,16 @@
 
 <h2 class="subtitle is-2">For your delight</h2>
 
+<div class="column is-full box has-text-left">
+
+  <p>Click to sort by name:</p>
+   <button ng-click="orderByMe('track.name')">Name</button>
+
+</div>
+
 <div class="container columns is-multiline">
 
-  <div class="column is-half box has-text-centered" ng-repeat="track in tracks">
+  <div class="column is-half box has-text-centered" ng-repeat="track in tracks | orderBy:myOrderBy">
     <a ui-sref="tracksShow({ id: track._id })">
       <h2 class="title is-3">{{ track.name }}</h2>
 
@@ -18,5 +25,5 @@
       </div>
     </a>
 </div>
-  
+
 </div>

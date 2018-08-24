@@ -6,6 +6,10 @@
   </head>
   <body class="container" ng-controller='MainCtrl'>
     <nav class="navbar">
+      <div class="navbar-brand">
+    <a class="navbar-item" href="https://sinatra-fans.herokuapp.com/#!/">
+      <img src="http://www.thefranksinatra.com/wp-content/uploads/2011/06/header.jpg" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="100vh">
+    </a>
       <a ui-sref-active= "is-active" ui-sref="home" class="navbar-item">Home</a>
       <a ui-sref-active= "is-active" ui-sref="about" class="navbar-item">About</a>
       <a ui-sref-active= "is-active" ui-sref="albumsIndex" class="navbar-item">Sinatra's Albums</a>
@@ -14,7 +18,17 @@
       <a ui-sref-active= "is-active" ui-sref="login" class="navbar-item" ng-if='!isAuthenticated()'>Log in</a>
       <a ui-sref-active= "is-active" ui-sref="register" class="navbar-item" ng-if='!isAuthenticated()'>Sign up!</a>
       <a ui-sref-active= "is-active" ng-click="logout()" class="navbar-item" ng-if='isAuthenticated()'>Log out</a>
+
+</div>
     </nav>
     <div ui-view></div>
+    <footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Sinatra project</strong> by <a href="https://jgthms.com">WDI35</a>. The source code is licensed
+      copyright 2018 ©️
+    </p>
+  </div>
+</footer>
   </body>
 </html>

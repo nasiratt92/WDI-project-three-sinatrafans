@@ -3,6 +3,16 @@
 
 <div class="container columns is-multiline">
 
+<!-- 
+  <div class="column is-half box has-text-centered" ng-repeat="x in results">
+      <h2 class="title is-3">{{ x.collectionName }}</h2>
+      <div class="columns">
+        <div class="column">
+          <img style="max-height: 300px" ng-src="{{ x.artworkUrl100 }}" alt="{{ x.collectionName }}">
+        </div>
+      </div>
+  </div> -->
+
   <div class="column is-half box has-text-centered" ng-repeat="album in albums">
     <a ui-sref="albumsShow({ id: album._id })">
       <h2 class="title is-3">{{ album.name }}</h2>
