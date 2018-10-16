@@ -5,7 +5,7 @@ function AlbumsNewCtrl($scope, $http, $state) {
       method: 'POST',
       url: '/api/albums',
       data: $scope.album
-    })// submit a HTTP rreques
+    })// submit a HTTP request
       .then(()=> $state.go('albumsIndex'));
 
   };
