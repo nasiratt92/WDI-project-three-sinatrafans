@@ -65,14 +65,16 @@ Working with a trello board template provided to us, A trello board was created 
 Trello Screenshot:
 ![trello](https://i.imgur.com/0QsGeYD.jpg)
 
-[Trello board - Link](https://trello.com/b/oDq6culm)
+[Trello board - Link](https://trello.com/b/lrZeBJWP)
 ---
 
 
 ### Wireframes
 Another first was to use a sketch up tool to create wireframes. I created wireframes on Prezzi, a tool usually used to deliver presentations, and intended to follow them.
 
-![picture alt](../screenshots/Screen Shot 2018-08-17 at 10.36.02.png "Home Page wireframe")
+![picture alt](./assets/screenshots/Screen Shot 2018-08-17 at 10.36.02.png "Home Page wireframe")
+
+---
 
 ### Challenges and Problems
 
