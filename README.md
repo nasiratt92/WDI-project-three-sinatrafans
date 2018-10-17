@@ -1,8 +1,15 @@
-# WDI-project-three-sinatrafans
----
+# Sinatra fans
 
 ### Overview
-A site for classical Jazz fans to celebrate the musical legend
+A site for classical Jazz fans to celebrate the musical legend Frank Sinatra.
+
+![picture alt](http://sinatra.com/sites/default/files/sinatraweb.jpg "Home Page wireframe")
+
+The fan albums model is if you are a FS fan, you can upload a track to sound cloud sung by you or by another artist to celebrate but it must be a track from FS Albums. Hence why to add a track you need log in and add it under a fan album.
+
+ The added tracks are available for all to listen under the tracks tab.
+
+The concerts tab displays all the FS contribute concerts taking place on Ticket master.
 ___
 ### Technologies:
 
@@ -10,6 +17,8 @@ ___
 - SCSS
 - JavaScript (ECMAScript 6)
 - Node JS
+- angular: v1.7.3
+- bulma
 - bcrypt
 - express
 - mongoose
@@ -29,10 +38,7 @@ ___
 
 A blogging platform that meets the following minimum criteria:
 #### The app must:
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+
 ##### Server-side:
 
 - Use Mongo, Node & Express to build a server-side API <kbd>✓</kbd>
@@ -70,41 +76,52 @@ Trello Screenshot:
 
 
 ### Wireframes
-Another first was to use a sketch up tool to create wireframes. I created wireframes on Prezzi, a tool usually used to deliver presentations, and intended to follow them.
+Another first was to use a sketch up tool to create wireframes. I created wireframes on Prezi, a tool usually used to deliver presentations but due to it's familiarity it served well.
+
+##### Wireframe Screenshots:
 
 ![picture alt](./assets/screenshots/Screen Shot 2018-08-17 at 10.36.02.png "Home Page wireframe")
+
+![picture alt](https://i.imgur.com/hsG8NgA.png "Home Page wireframe")
 
 ---
 
 ### Challenges and Problems
 
-- It was challenging at first to figure out the step-by-step process of building the app and inputting this into our Trello board so that we could divide the work and have a solid plan.
+- This project with it it's own challenges, in terms of project execution, the project needed a sense of balancing allocated time between creating and updating trello, wireframing, MVP , coding Backend features, coding Frontend features,  styling and time spent researching coding errors.
 
--  The meetup API was harder to implement than we thought it would be originally and took us longer than we expected to get it working and to find the correct url needed to get the response we wanted. Making a proxy request was challenging as it required a more intricate setup.
+-  The Itunes API caused an issue it was discovered that Itunes Api did not allow request through front end and therefore the full code had to be re written in the backend in order to render albums from Itunes web Api.
+
 
 - The functionality behind a logged in user joining an existing meetup event from the API and displaying the single event on the show page was also more complicated than we originally expected. We had to save the information from the API we wished to display on the page.
 
 ---
 
 ### Wins
+As I progressed through the project, I found that I could probably do a Fortnite style dance for each of these achievements:
 
 - Four types of API used - Frontend, Backend, Authorised web Api and no-API key required
-- Secure route - User Login/Log Of & Sign-up
--Tests - Two Backend tests written (i.e. one non secured route and one non secured route), which ran were successfully.
+
+- Secure route - User Login/Log-off & Sign-up
+
+- Tests - Two Backend tests written (i.e. one non secured route and one non secured route), which ran were successfully.
+
 - Stored Api key inside environment file
+
 - Deployed to Heroku
+
 - Not logged in users can hear fan Tracks
+
 - Buy concert tickets feature based on links from Ticket master API.
+
 - Employed Angular's in-built filterFilter function on the concert page to search the concerts.
--
 
 ---
 
 ### Future Features
 
-Features I would have liked to include:
 
-- As per the original wireframe. The landing page to display the last three track additions with the user name and city.
+- Complete the site layout as per the wireframes and The landing page to display the last three track additions with the user name and city.
 
 - Complete the custom directive for concerts show page to display the venue location on a map.
 
