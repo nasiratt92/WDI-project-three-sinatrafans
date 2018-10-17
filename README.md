@@ -3,9 +3,11 @@
 ### Overview
 A site for classical Jazz fans to celebrate the musical legend Frank Sinatra.
 
+[Sinatra-fans  - Link](https://sinatra-fans.herokuapp.com/)
+
 ![picture alt](http://sinatra.com/sites/default/files/sinatraweb.jpg "Home Page wireframe")
 
-The fan albums model is if you are a FS fan, you can upload a track to sound cloud sung by you or by another artist to celebrate but it must be a track from FS Albums. Hence why to add a track you need log in and add it under a fan album.
+Fan albums model as a FS fan, you can upload a track to sound cloud sung by you or by another artist to celebrate but it must be a track from FS Albums. Hence why to add a track you need log in and add it under a fan album.
 
  The added tracks are available for all to listen under the tracks tab.
 
