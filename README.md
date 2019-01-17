@@ -37,7 +37,7 @@ Fan albums - as a FS fan, you can upload a track to Soundcloud sung by you or by
 
  The added tracks are available for all to listen under the tracks tab.
 
-The concerts tab displays all the FS contribute concerts taking place on Ticket master.
+The concerts tab displays all the FS tribute concerts taking place around the world on Ticket master.
 ___
 ### Technologies:
 
@@ -65,11 +65,12 @@ ___
 
 ### Trello
 
- In addition to daily stand up, I was encouraged by class tutors to employ Trello as a tool for planning and for completion of this project. Typically a developer would pick a card from the trello board and work on it, making development process transparent to other members of Dev team.
+ In addition to daily stand up, I was encouraged by class tutors to employ Trello as a tool for planning and for completion of this project. As typically a developer would pick a card from the trello board and work on it, making development process transparent to other members of Dev team.
 
-Working with a trello board template provided to us, a trello board was created making code planning and tracking the project status a lot easier. I really enjoyed the clarity and simplicity that came with using a trello board.
+Working with a trello board template provided to us, a trello board was created for this project, making code planning and tracking the project status a lot easier. I really enjoyed the clarity and simplicity that came with using a trello board.
 
 Trello Screenshot:
+
 ![trello](https://i.imgur.com/0QsGeYD.jpg)
 
 [Trello board - Link](https://trello.com/b/lrZeBJWP)
@@ -77,7 +78,7 @@ Trello Screenshot:
 
 
 ### Wireframes
-Another first was to use a sketch up tool to create wireframes. I created wireframes on Prezi, a tool usually used to deliver presentations but due to it's familiarity.
+Another first was to use a sketch up tool to create wireframes. I created wireframes on Prezi (a tool usually used to deliver presentations) due to it's familiarity.
 
 ##### Wireframe Screenshots:
 
@@ -89,9 +90,9 @@ Another first was to use a sketch up tool to create wireframes. I created wirefr
 
 ### Challenges and Problems
 
-This project's main challenge was time management, the project required time allocation balancing between; creating and updating Trello, wireframing, MVP , coding Backend features, coding Frontend features,  styling and time spent researching coding errors/ bug fixing.
+This project's main challenge was time management, the project required time allocation balancing between; creating and updating Trello, wireframing, MVP, coding Backend features, coding Frontend features,  styling and time spent researching coding errors/ bug fixing.
 
--  The Itunes API caused an issue it was discovered that Itunes Api did not allow request through front end and therefore the full code had to be re written in the backend in order to render albums from Itunes web Api.
+-  The Itunes API caused an issue, as it was discovered that Itunes Api did not allow request through front end and therefore the Api call had to bee made from the backend in order to render albums from Itunes web Api.
 
 
 ---
@@ -99,13 +100,35 @@ This project's main challenge was time management, the project required time all
 ### Wins
 As I progressed through the project, I found that I could probably do a Fortnite style dance for each of these achievements:
 
-- Four types of API used - Frontend, Backend, Authorised web Api and no-API key required
+- Four types of API used - Frontend, Backend, Authorised web Api and no API-key required web API
 
-- Secure route - User Login/Log-off & Sign-up
+- Secure routes - User Login/Log-off & Sign-up
 
-- Tests - Two Backend tests written (i.e. one non secured route and one non secured route), which ran were successfully.
+- Tests - Two Backend tests written (i.e. one non secured route and one non secured route), which ran successfully:
 
-- Stored Api key inside environment file
+```js
+it('should return a 401 without a token', done =>{
+  api.delete(`/api/albums/${albumId}`)
+    .end((err, res) => {
+      expect(res.status).to.eq(401);
+      done();
+    });
+});
+
+
+it('should delete the Album', done => {
+  api.delete(`/api/albums/${albumId}`)
+    .set('Authorization', `Bearer ${token}`)
+    .then(() => Album.find())
+    .then(albums => {
+      expect(albums.length).to.eq(0);
+      done();
+    });
+});
+```
+[Test file - Link](./test/spec_helper.js)
+
+- Hid API key inside environment file
 
 - Deployed to Heroku
 
@@ -120,10 +143,10 @@ As I progressed through the project, I found that I could probably do a Fortnite
 ### Future Features
 
 
-- Complete the site layout as per the wireframes and The landing page to display the last three track additions with the user name and city.
+- Complete the site layout as per the wireframes and the landing page to display the last three track additions with the user name and city.
 
 - Complete the custom directive for concerts show page to display the venue location on a map.
 
-- Complete the concerts sort feature allowing users to sort concerts by location, date.
+- Complete the concerts sort feature allowing users to sort concerts by location and date.
 
 - Better user walkthrough experience.
